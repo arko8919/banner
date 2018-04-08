@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* Reset default browser values */
+    margin: 0;
+    padding: 0;
+}
+
+#stage {
+    /* Position element in center of body */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Support old version of browsers */
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

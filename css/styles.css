@@ -12,7 +12,7 @@ body {
 }
 
 #stage {
-    /* Position element in center of body */
+    /* Position element in center of the body */
     position: absolute;
     top: 50%;
     left: 50%;

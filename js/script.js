@@ -174,7 +174,7 @@ window.onload = function () {
         sheen.x = sheen.x - 50;
 
         // animate sheen
-        createjs.Tween.get(sheen, {loop: 2}).to({x: 286.50}, 500).to({alpha: 0}).wait(4000);
+        createjs.Tween.get(sheen).wait(1500).to({alpha: 1}).to({x: 286.50}, 500).to({alpha: 0});
         createjs.Ticker.framerate = 60;
         createjs.Ticker.addEventListener("tick", handleTick);
     }
@@ -276,6 +276,8 @@ window.onload = function () {
             sheen.graphics.beginFill("#fff").drawRect(0, 0, 50, 33);
             // skew sheen horizontally
             sheen.skewX = 20;
+            // set alpha to 0
+            sheen.alpha = 0;
 
             return sheen;
         },

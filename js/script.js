@@ -1,5 +1,14 @@
-// JavaScript Document
-window.onload = function () {
+const buttonRef = document.querySelector(".button");
+
+
+
+buttonRef.addEventListener("click", function() {
+    window.location.reload();
+});
+
+window.addEventListener("load", animo());
+
+function animo() {
     console.log("Junior developer test.");
 
     // declare your variables here.
@@ -40,19 +49,19 @@ window.onload = function () {
 
     // provide a manifest of files and ids to be loaded.
     loader.loadManifest([
-        {id: "background", src: "images/background.png"},
-        {id: "samsung", src: "images/samsung.png"},
-        {id: "voucher", src: "images/voucher.png"},
-        {id: "sky-logo", src: "images/sky-logo.png"},
-        {id: "text-reward", src: "images/text-reward.png"},
-        {id: "join-sky", src: "images/join-sky.png"},
-        {id: "sky-rental", src: "images/sky-rental.png"},
-        {id: "stamp", src: "images/stamp.png"},
-        {id: "button", src: "images/button.png"},
-        {id: "text-broadband", src: "images/text-broadband.png"},
-        {id: "text-voucher", src: "images/text-voucher.png"},
-        {id: "text-offer", src: "images/text-offer.png"},
-        {id: "sky-rental-lightgrey", src: "images/sky-rental-lightgrey.png"}
+        { id: "background", src: "images/background.png" },
+        { id: "samsung", src: "images/samsung.png" },
+        { id: "voucher", src: "images/voucher.png" },
+        { id: "sky-logo", src: "images/sky-logo.png" },
+        { id: "text-reward", src: "images/text-reward.png" },
+        { id: "join-sky", src: "images/join-sky.png" },
+        { id: "sky-rental", src: "images/sky-rental.png" },
+        { id: "stamp", src: "images/stamp.png" },
+        { id: "button", src: "images/button.png" },
+        { id: "text-broadband", src: "images/text-broadband.png" },
+        { id: "text-voucher", src: "images/text-voucher.png" },
+        { id: "text-offer", src: "images/text-offer.png" },
+        { id: "sky-rental-lightgrey", src: "images/sky-rental-lightgrey.png" }
     ]);
 
     function handleAllImagesLoaded() {
@@ -107,9 +116,9 @@ window.onload = function () {
         );
 
         // animation's
-        createjs.Tween.get(textReward).to({alpha: 1}, 500).wait(2000).to({alpha: 0}, 500);
-        createjs.Tween.get(samsung).wait(2500).to({alpha: 0}, 500);
-        createjs.Tween.get(voucher).wait(2500).to({alpha: 0}, 500);
+        createjs.Tween.get(textReward).to({ alpha: 1 }, 500).wait(2000).to({ alpha: 0 }, 500);
+        createjs.Tween.get(samsung).wait(2500).to({ alpha: 0 }, 500);
+        createjs.Tween.get(voucher).wait(2500).to({ alpha: 0 }, 500);
 
         // after a timeout and the animations have completed, draw frame 2.
         setTimeout(frame2, 3000);
@@ -132,10 +141,10 @@ window.onload = function () {
         );
 
         // animation's
-        createjs.Tween.get(joinSky).to({alpha: 1}, 500).wait(2000).to({alpha: 0}, 500);
-        createjs.Tween.get(skyRental).to({alpha: 1}, 500).wait(2000).to({alpha: 0}, 500);
+        createjs.Tween.get(joinSky).to({ alpha: 1 }, 500).wait(2000).to({ alpha: 0 }, 500);
+        createjs.Tween.get(skyRental).to({ alpha: 1 }, 500).wait(2000).to({ alpha: 0 }, 500);
         // fall and bounce effect on stamp
-        createjs.Tween.get(stamp).to({x: stamp.x, y: 65}, 2000, createjs.Ease.bounceOut).wait(500).to({alpha: 0}, 500);
+        createjs.Tween.get(stamp).to({ x: stamp.x, y: 65 }, 2000, createjs.Ease.bounceOut).wait(500).to({ alpha: 0 }, 500);
 
         // after a timeout and the animations have completed, draw frame 3.
         setTimeout(frame3, 3000);
@@ -157,10 +166,10 @@ window.onload = function () {
         stage.addChild(button, textVoucher, textBroadband, textOffer, skyRentalLightgrey);
 
         // animations's
-        createjs.Tween.get(textVoucher).to({alpha: 1}, 1000, createjs.Ease.getPowIn(2));
-        createjs.Tween.get(textBroadband).to({alpha: 1}, 1000, createjs.Ease.getPowIn(2));
-        createjs.Tween.get(textOffer).to({alpha: 1}, 1000, createjs.Ease.getPowIn(2));
-        createjs.Tween.get(skyRentalLightgrey).to({alpha: 1}, 1000, createjs.Ease.getPowIn(2));
+        createjs.Tween.get(textVoucher).to({ alpha: 1 }, 1000, createjs.Ease.getPowIn(2));
+        createjs.Tween.get(textBroadband).to({ alpha: 1 }, 1000, createjs.Ease.getPowIn(2));
+        createjs.Tween.get(textOffer).to({ alpha: 1 }, 1000, createjs.Ease.getPowIn(2));
+        createjs.Tween.get(skyRentalLightgrey).to({ alpha: 1 }, 1000, createjs.Ease.getPowIn(2));
 
         // container for sheen object
         var sheen;
@@ -174,7 +183,7 @@ window.onload = function () {
         sheen.x = sheen.x - 50;
 
         // animate sheen
-        createjs.Tween.get(sheen).wait(1500).to({alpha: 1}).to({x: 286.50}, 500).to({alpha: 0});
+        createjs.Tween.get(sheen).wait(1500).to({ alpha: 1 }).to({ x: 286.50 }, 500).to({ alpha: 0 });
         createjs.Ticker.framerate = 60;
         createjs.Ticker.addEventListener("tick", handleTick);
     }
@@ -271,7 +280,7 @@ window.onload = function () {
 
         drawSheen: function drawSheen() {
             // create sheen and set coordinates
-            var sheen = new createjs.Shape().set({x: 148.25, y: 207});
+            var sheen = new createjs.Shape().set({ x: 148.25, y: 207 });
             // fill sheen background with white color and draw it
             sheen.graphics.beginFill("#fff").drawRect(0, 0, 50, 33);
             // skew sheen horizontally
@@ -305,3 +314,6 @@ window.onload = function () {
         console.log("The animation's has been stopped!!!");
     }
 };
+
+
+
